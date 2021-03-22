@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.example</groupId>
+    <artifactId>CrimeaBot</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.6.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>com.heroku.sdk</groupId>
+                <artifactId>heroku-maven-plugin</artifactId>
+                <version>3.0.3</version>
+                <configuration>
+                    <appName>sleepy-bayou-59983</appName>
+                    <includeTarget>false</includeTarget>
+                    <includes>
+                        <include>C:\Users\Langer\workspace\Bot\CrimeaBot\target\CrimeaBot-1.0-SNAPSHOT.jar</include>
+                    </includes>
+                    <processTypes>
+                        <web>java -jar C:\Users\Langer\workspace\Bot\CrimeaBot\target\CrimeaBot-1.0-SNAPSHOT.jar</web>
+                    </processTypes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <dependencies>
+        <dependency>
+            <groupId>org.telegram</groupId>
+            <artifactId>telegrambots</artifactId>
+            <version>4.8.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jsoup</groupId>
+            <artifactId>jsoup</artifactId>
+            <version>1.12.2</version>
+        </dependency>
+    </dependencies>
+
+
+</project>
+
+<!--        <?xml version="1.0" encoding="UTF-8"?>-->
+<!--<project xmlns="http://maven.apache.org/POM/4.0.0"-->
+<!--         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
+<!--         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">-->
+<!--<modelVersion>4.0.0</modelVersion>-->
+
+<!--<groupId>org.telegam.bot</groupId>-->
+<!--<artifactId>OurCrimeaBot</artifactId>-->
+<!--<version>1.0</version>-->
+<!--<url>https://github.com/mark1992langer/OurCrimeaBot</url>-->
+
+<!--<properties>-->
+<!--    <java.version>14</java.version>-->
+<!--    <maven.compiler.source>${java.version}</maven.compiler.source>-->
+<!--    <maven.compiler.target>${java.version}</maven.compiler.target>-->
+<!--    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>-->
+<!--    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>-->
+<!--    <org.projectlombok.version>1.18.16</org.projectlombok.version>-->
+<!--    <telegram.version>4.8.1</telegram.version>-->
+<!--    <jsoup.version>1.12.2</jsoup.version>-->
+<!--    <dependency.locations.enabled>false</dependency.locations.enabled>-->
+<!--</properties>-->
+
+
+<!--<dependencies>-->
+<!--    &lt;!&ndash; https://mvnrepository.com/artifact/org.telegram/telegrambots &ndash;&gt;-->
+<!--    <dependency>-->
+<!--        <groupId>org.telegram</groupId>-->
+<!--        <artifactId>telegrambots</artifactId>-->
+<!--        <version>${telegram.version}</version>-->
+<!--    </dependency>-->
+<!--    &lt;!&ndash;        <dependency>&ndash;&gt;-->
+<!--    &lt;!&ndash;            <groupId>org.projectlombok</groupId>&ndash;&gt;-->
+<!--    &lt;!&ndash;            <artifactId>lombok</artifactId>&ndash;&gt;-->
+<!--    &lt;!&ndash;            <version>${org.projectlombok.version}</version>&ndash;&gt;-->
+<!--    &lt;!&ndash;            <scope>provided</scope>&ndash;&gt;-->
+<!--    &lt;!&ndash;        </dependency>&ndash;&gt;-->
+<!--    &lt;!&ndash; https://mvnrepository.com/artifact/org.jsoup/jsoup &ndash;&gt;-->
+<!--    <dependency>-->
+<!--        <groupId>org.jsoup</groupId>-->
+<!--        <artifactId>jsoup</artifactId>-->
+<!--        <version>${jsoup.version}</version>-->
+<!--    </dependency>-->
+<!--</dependencies>-->
+
+<!--<build>-->
+<!--    <plugins>-->
+<!--        &lt;!&ndash;            <plugin>&ndash;&gt;-->
+<!--        &lt;!&ndash;                <groupId>com.heroku.sdk</groupId>&ndash;&gt;-->
+<!--        &lt;!&ndash;                <artifactId>heroku-maven-plugin</artifactId>&ndash;&gt;-->
+<!--        &lt;!&ndash;                <version>3.0.3</version>&ndash;&gt;-->
+<!--        &lt;!&ndash;                <configuration>&ndash;&gt;-->
+<!--        &lt;!&ndash;                    <appName>https://ourcrimeabot.herokuapp.com</appName>&ndash;&gt;-->
+<!--        &lt;!&ndash;                    <processTypes>&ndash;&gt;-->
+<!--        &lt;!&ndash;                        <worker>&ndash;&gt;-->
+<!--        &lt;!&ndash;                            java $JAVA_OPTS -cp target/classes:target/dependency/* path.to.your.Main-class&ndash;&gt;-->
+<!--        &lt;!&ndash;                        </worker>&ndash;&gt;-->
+<!--        &lt;!&ndash;                    </processTypes>&ndash;&gt;-->
+<!--        &lt;!&ndash;                </configuration>&ndash;&gt;-->
+<!--        &lt;!&ndash;            </plugin>&ndash;&gt;-->
+<!--        <plugin>-->
+<!--            <groupId>org.apache.maven.plugins</groupId>-->
+<!--            <artifactId>maven-compiler-plugin</artifactId>-->
+<!--            <version>3.8.1</version>-->
+<!--            <configuration>-->
+<!--                <release>${java.version}</release>-->
+<!--            </configuration>-->
+<!--        </plugin>-->
+<!--        <plugin>-->
+<!--            <groupId>org.apache.maven.plugins</groupId>-->
+<!--            <artifactId>maven-site-plugin</artifactId>-->
+<!--            <version>3.8.2</version>-->
+<!--        </plugin>-->
+<!--        <plugin>-->
+<!--            <groupId>org.apache.maven.plugins</groupId>-->
+<!--            <artifactId>maven-project-info-reports-plugin</artifactId>-->
+<!--            <version>3.0.0</version>-->
+<!--        </plugin>-->
+<!--    </plugins>-->
+<!--</build>-->
+<!--<distributionManagement>-->
+<!--    <repository>-->
+<!--        <id>central</id>-->
+<!--        <name>plugins-releases</name>-->
+<!--        <url>https://github.com/mark1992langer/OurCrimeaBot</url>-->
+<!--    </repository>-->
+<!--</distributionManagement>-->
+
+
+<!--</project>-->
