@@ -32,10 +32,10 @@
                     <appName>sleepy-bayou-59983</appName>
                     <includeTarget>false</includeTarget>
                     <includes>
-                        <include>C:\Users\Langer\workspace\Bot\CrimeaBot\target\CrimeaBot-1.0-SNAPSHOT.jar</include>
+                        <include>C:\Users\Langer\workspace\Bot\CrimeaBot\CrimeaBot-1.0-SNAPSHOT.jar</include>
                     </includes>
                     <processTypes>
-                        <web>java -jar C:\Users\Langer\workspace\Bot\CrimeaBot\target\CrimeaBot-1.0-SNAPSHOT.jar</web>
+                        <web>java -jar C:\Users\Langer\workspace\Bot\CrimeaBot\CrimeaBot-1.0-SNAPSHOT.jar</web>
                     </processTypes>
                 </configuration>
             </plugin>
