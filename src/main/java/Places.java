@@ -18,74 +18,64 @@ public class Places {
     }
 
     private String connect(String msg) {
-
-        switch (msg) {
-            case "Городища": {
-                try {
-                    document = Jsoup.connect("https://prostorikrima.ru/c/gorodischa-137").get();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                getTitle(document);
+        if (msg.equals("Городища")){
+            try {
+                document = Jsoup.connect("https://prostorikrima.ru/c/gorodischa-137").get();
+            } catch (IOException e) {
+                e.printStackTrace();
             }
-            case "Дворцы": {
-                try {
-                    document = Jsoup.connect("https://prostorikrima.ru/c/dvorcy-109").get();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                getTitle(document);
+            getTitle(document);
+        }else if (msg.equals("Дворцы")){
+            try {
+                document = Jsoup.connect("https://prostorikrima.ru/c/dvorcy-109").get();
+            } catch (IOException e) {
+                e.printStackTrace();
             }
-            case "Крепости": {
-                try {
-                    document = Jsoup.connect("https://prostorikrima.ru/c/krepost-90").get();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                getTitle(document);
+            getTitle(document);
+        }else if (msg.equals("Крепости")){
+            try {
+                document = Jsoup.connect("https://prostorikrima.ru/c/krepost-90").get();
+            } catch (IOException e) {
+                e.printStackTrace();
             }
-            case "Парки": {
-                try {
-                    document = Jsoup.connect("https://prostorikrima.ru/c/parki-92").get();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                getTitle(document);
+            getTitle(document);
+        }else if (msg.equals("Парки")){
+            try {
+                document = Jsoup.connect("https://prostorikrima.ru/c/parki-92").get();
+            } catch (IOException e) {
+                e.printStackTrace();
             }
-            case "Пещерные города": {
-                try {
-                    document = Jsoup.connect("https://prostorikrima.ru/c/peschernye-goroda-89").get();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                getTitle(document);
+            getTitle(document);
+        }else if (msg.equals("Пещерные города")){
+            try {
+                document = Jsoup.connect("https://prostorikrima.ru/c/peschernye-goroda-89").get();
+            } catch (IOException e) {
+                e.printStackTrace();
             }
-            case "Подводные объекты": {
-                try {
-                    document = Jsoup.connect("https://prostorikrima.ru/c/podvodnye-obekty-88").get();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                getTitle(document);
+            getTitle(document);
+        }else if (msg.equals("Подводные объекты")){
+            try {
+                document = Jsoup.connect("https://prostorikrima.ru/c/podvodnye-obekty-88").get();
+            } catch (IOException e) {
+                e.printStackTrace();
             }
-            case "Монастыри": {
-                try {
-                    document = Jsoup.connect("https://prostorikrima.ru/c/monastyri-142").get();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                getTitle(document);
+            getTitle(document);
+        }else if (msg.equals("Монастыри")){
+            try {
+                document = Jsoup.connect("https://prostorikrima.ru/c/monastyri-142").get();
+            } catch (IOException e) {
+                e.printStackTrace();
             }
-            case "Разное": {
-                try {
-                    document = Jsoup.connect("https://prostorikrima.ru/c/raznoe-135").get();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                getTitle(document);
+            getTitle(document);
+        }else if (msg.equals("Разное")){
+            try {
+                document = Jsoup.connect("https://prostorikrima.ru/c/raznoe-135").get();
+            } catch (IOException e) {
+                e.printStackTrace();
             }
-            default: throw new IllegalStateException("Unexpected value: " + msg);
+            getTitle(document);
         }
+        return getTitle(document);
     }
 
     public String getTitle(Document document) {

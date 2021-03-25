@@ -44,15 +44,13 @@ public class Bot extends TelegramLongPollingBot {
                     }catch (TelegramApiException e){
                         e.printStackTrace();
                     }
-                }
-                else if(update.getMessage().getText().equals("Как добраться")){
+                }else if(update.getMessage().getText().equals("Как добраться")){
                     try {
                         execute(sendMessageRoad(update.getMessage().getChatId()));
                     }catch (TelegramApiException e){
                         e.printStackTrace();
                     }
-                }
-                else if(update.getMessage().getText().equals("Куда ехать")){
+                }else if(update.getMessage().getText().equals("Куда ехать")){
                     SendPhoto sendPhoto = new SendPhoto();
                     sendPhoto.setChatId(chat_ad);
                     sendPhoto.setPhoto(new File("photo/0.002674.jpg "));
@@ -62,8 +60,7 @@ public class Bot extends TelegramLongPollingBot {
                     } catch (TelegramApiException e) {
                         e.printStackTrace();
                     }
-                }
-                else if(update.getMessage().getText().equals("Тропы")){
+                }else if(update.getMessage().getText().equals("Тропы")){
                     SendPhoto sendPhoto = new SendPhoto();
                     sendPhoto.setChatId(chat_ad);
                     sendPhoto.setPhoto(new File("photo/f218529c493534318ff1.jpg "));
@@ -73,8 +70,7 @@ public class Bot extends TelegramLongPollingBot {
                     } catch (TelegramApiException e) {
                         e.printStackTrace();
                     }
-                }
-                else if(update.getMessage().getText().equals("Водопады")){
+                }else if(update.getMessage().getText().equals("Водопады")){
                     SendPhoto sendPhoto = new SendPhoto();
                     sendPhoto.setChatId(chat_ad);
                     sendPhoto.setPhoto(new File("photo/473664_main.jpg "));
@@ -84,8 +80,7 @@ public class Bot extends TelegramLongPollingBot {
                     } catch (TelegramApiException e) {
                         e.printStackTrace();
                     }
-                }
-                else if(update.getMessage().getText().equals("Водоемы")){
+                }else if(update.getMessage().getText().equals("Водоемы")){
                     SendPhoto sendPhoto = new SendPhoto();
                     sendPhoto.setChatId(chat_ad);
                     sendPhoto.setPhoto(new File("photo/scale_1200.jpg "));
@@ -95,8 +90,7 @@ public class Bot extends TelegramLongPollingBot {
                     } catch (TelegramApiException e) {
                         e.printStackTrace();
                     }
-                }
-                else if(update.getMessage().getText().equals("Пещеры")){
+                }else if(update.getMessage().getText().equals("Пещеры")){
                     SendPhoto sendPhoto = new SendPhoto();
                     sendPhoto.setChatId(chat_ad);
                     sendPhoto.setPhoto(new File("photo/Peshhera-Kr.jpg "));
@@ -106,8 +100,7 @@ public class Bot extends TelegramLongPollingBot {
                     } catch (TelegramApiException e) {
                         e.printStackTrace();
                     }
-                }
-                else if(update.getMessage().getText().equals("Горы и скалы")){
+                }else if(update.getMessage().getText().equals("Горы и скалы")){
                     SendPhoto sendPhoto = new SendPhoto();
                     sendPhoto.setChatId(chat_ad);
                     sendPhoto.setPhoto(new File("photo/708693_main.jpg "));
@@ -117,8 +110,7 @@ public class Bot extends TelegramLongPollingBot {
                     } catch (TelegramApiException e) {
                         e.printStackTrace();
                     }
-                }
-                else if(update.getMessage().getText().equals("Бухты")){
+                }else if(update.getMessage().getText().equals("Бухты")){
                     SendPhoto sendPhoto = new SendPhoto();
                     sendPhoto.setChatId(chat_ad);
                     sendPhoto.setPhoto(new File("photo/IMG_0010_2.jpg "));
@@ -128,8 +120,7 @@ public class Bot extends TelegramLongPollingBot {
                     } catch (TelegramApiException e) {
                         e.printStackTrace();
                     }
-                }
-                else if(update.getMessage().getText().equals("Заповедники")){
+                }else if(update.getMessage().getText().equals("Заповедники")){
                     SendPhoto sendPhoto = new SendPhoto();
                     sendPhoto.setChatId(chat_ad);
                     sendPhoto.setPhoto(new File("photo/Krymskiy-prirodniy.jpg "));
@@ -139,8 +130,7 @@ public class Bot extends TelegramLongPollingBot {
                     } catch (TelegramApiException e) {
                         e.printStackTrace();
                     }
-                }
-                else if(update.getMessage().getText().equals("Родники")){
+                }else if(update.getMessage().getText().equals("Родники")){
                     SendPhoto sendPhoto = new SendPhoto();
                     sendPhoto.setChatId(chat_ad);
                     sendPhoto.setPhoto(new File("photo/1710279389.jpg "));
@@ -150,8 +140,7 @@ public class Bot extends TelegramLongPollingBot {
                     } catch (TelegramApiException e) {
                         e.printStackTrace();
                     }
-                }
-                else if(update.getMessage().getText().equals("Планетарий")){
+                }else if(update.getMessage().getText().equals("Планетарий")){
                     SendPhoto sendPhoto = new SendPhoto();
                     sendPhoto.setChatId(chat_ad);
                     sendPhoto.setPhoto(new File("photo/c742edcacd92111a3.jpg "));
@@ -161,8 +150,7 @@ public class Bot extends TelegramLongPollingBot {
                     } catch (TelegramApiException e) {
                         e.printStackTrace();
                     }
-                }
-                else if(update.getMessage().getText().equals("Аквапарки")){
+                }else if(update.getMessage().getText().equals("Аквапарки")){
                     SendPhoto sendPhoto = new SendPhoto();
                     sendPhoto.setChatId(chat_ad);
                     sendPhoto.setPhoto(new File("photo/IMG_5604.jpg "));
@@ -172,8 +160,7 @@ public class Bot extends TelegramLongPollingBot {
                     } catch (TelegramApiException e) {
                         e.printStackTrace();
                     }
-                }
-                else if(update.getMessage().getText().equals("Атракционы")){
+                }else if(update.getMessage().getText().equals("Атракционы")){
                     SendPhoto sendPhoto = new SendPhoto();
                     sendPhoto.setChatId(chat_ad);
                     sendPhoto.setPhoto(new File("photo/Пляжный-отдых-в-.jpg "));
@@ -183,8 +170,7 @@ public class Bot extends TelegramLongPollingBot {
                     } catch (TelegramApiException e) {
                         e.printStackTrace();
                     }
-                }
-                else if(update.getMessage().getText().equals("Зоопарки")){
+                }else if(update.getMessage().getText().equals("Зоопарки")){
                     SendPhoto sendPhoto = new SendPhoto();
                     sendPhoto.setChatId(chat_ad);
                     sendPhoto.setPhoto(new File("photo/scale_12).jpg "));
@@ -194,8 +180,7 @@ public class Bot extends TelegramLongPollingBot {
                     } catch (TelegramApiException e) {
                         e.printStackTrace();
                     }
-                }
-                else if(update.getMessage().getText().equals("Дельфинарии")){
+                }else if(update.getMessage().getText().equals("Дельфинарии")){
                     SendPhoto sendPhoto = new SendPhoto();
                     sendPhoto.setChatId(chat_ad);
                     sendPhoto.setPhoto(new File("photo/XXL.jpg "));
@@ -205,8 +190,7 @@ public class Bot extends TelegramLongPollingBot {
                     } catch (TelegramApiException e) {
                         e.printStackTrace();
                     }
-                }
-                else if(update.getMessage().getText().equals("Музеи")){
+                }else if(update.getMessage().getText().equals("Музеи")){
                     SendPhoto sendPhoto = new SendPhoto();
                     sendPhoto.setChatId(chat_ad);
                     sendPhoto.setPhoto(new File("photo/i.jpg "));
@@ -216,8 +200,7 @@ public class Bot extends TelegramLongPollingBot {
                     } catch (TelegramApiException e) {
                         e.printStackTrace();
                     }
-                }
-                else if(update.getMessage().getText().equals("Экскурсии")){
+                }else if(update.getMessage().getText().equals("Экскурсии")){
                     SendPhoto sendPhoto = new SendPhoto();
                     sendPhoto.setChatId(chat_ad);
                     sendPhoto.setPhoto(new File("photo/207b68025d.jpg "));
@@ -227,8 +210,7 @@ public class Bot extends TelegramLongPollingBot {
                     } catch (TelegramApiException e) {
                         e.printStackTrace();
                     }
-                }
-                else if(update.getMessage().getText().equals("Активный отдых")){
+                }else if(update.getMessage().getText().equals("Активный отдых")){
                     SendPhoto sendPhoto = new SendPhoto();
                     sendPhoto.setChatId(chat_ad);
                     sendPhoto.setPhoto(new File("photo/16_7.jpg "));
@@ -238,8 +220,7 @@ public class Bot extends TelegramLongPollingBot {
                     } catch (TelegramApiException e) {
                         e.printStackTrace();
                     }
-                }
-                else if(update.getMessage().getText().equals("Городища")){
+                }else if(update.getMessage().getText().equals("Городища")){
                     SendPhoto sendPhoto = new SendPhoto();
                     sendPhoto.setChatId(chat_ad);
                     sendPhoto.setPhoto(new File("photo/b707406s-1920.jpg "));
@@ -249,8 +230,7 @@ public class Bot extends TelegramLongPollingBot {
                     } catch (TelegramApiException e) {
                         e.printStackTrace();
                     }
-                }
-                else if(update.getMessage().getText().equals("Дворцы")){
+                }else if(update.getMessage().getText().equals("Дворцы")){
                     SendPhoto sendPhoto = new SendPhoto();
                     sendPhoto.setChatId(chat_ad);
                     sendPhoto.setPhoto(new File("photo/big_12843477302.jpg "));
@@ -260,8 +240,7 @@ public class Bot extends TelegramLongPollingBot {
                     } catch (TelegramApiException e) {
                         e.printStackTrace();
                     }
-                }
-                else if(update.getMessage().getText().equals("Крепости")){
+                }else if(update.getMessage().getText().equals("Крепости")){
                     SendPhoto sendPhoto = new SendPhoto();
                     sendPhoto.setChatId(chat_ad);
                     sendPhoto.setPhoto(new File("photo/2473115.jpg "));
@@ -271,8 +250,7 @@ public class Bot extends TelegramLongPollingBot {
                     } catch (TelegramApiException e) {
                         e.printStackTrace();
                     }
-                }
-                else if(update.getMessage().getText().equals("Парки")){
+                }else if(update.getMessage().getText().equals("Парки")){
                     SendPhoto sendPhoto = new SendPhoto();
                     sendPhoto.setChatId(chat_ad);
                     sendPhoto.setPhoto(new File("photo/big-57f174-1c8sliv.jpg "));
@@ -282,8 +260,7 @@ public class Bot extends TelegramLongPollingBot {
                     } catch (TelegramApiException e) {
                         e.printStackTrace();
                     }
-                }
-                else if(update.getMessage().getText().equals("Пещерные города")){
+                }else if(update.getMessage().getText().equals("Пещерные города")){
                     SendPhoto sendPhoto = new SendPhoto();
                     sendPhoto.setChatId(chat_ad);
                     sendPhoto.setPhoto(new File("photo/902.jpg "));
@@ -293,8 +270,7 @@ public class Bot extends TelegramLongPollingBot {
                     } catch (TelegramApiException e) {
                         e.printStackTrace();
                     }
-                }
-                else if(update.getMessage().getText().equals("Подводные объекты")){
+                }else if(update.getMessage().getText().equals("Подводные объекты")){
                     SendPhoto sendPhoto = new SendPhoto();
                     sendPhoto.setChatId(chat_ad);
                     sendPhoto.setPhoto(new File("photo/Zatonuvshee-sudno2.jpg "));
@@ -304,8 +280,7 @@ public class Bot extends TelegramLongPollingBot {
                     } catch (TelegramApiException e) {
                         e.printStackTrace();
                     }
-                }
-                else if(update.getMessage().getText().equals("Монастыри")){
+                }else if(update.getMessage().getText().equals("Монастыри")){
                     SendPhoto sendPhoto = new SendPhoto();
                     sendPhoto.setChatId(chat_ad);
                     sendPhoto.setPhoto(new File("photo/scale).jpg "));
@@ -315,8 +290,7 @@ public class Bot extends TelegramLongPollingBot {
                     } catch (TelegramApiException e) {
                         e.printStackTrace();
                     }
-                }
-                else if(update.getMessage().getText().equals("Разное")){
+                }else if(update.getMessage().getText().equals("Разное")){
                     SendPhoto sendPhoto = new SendPhoto();
                     sendPhoto.setChatId(chat_ad);
                     sendPhoto.setPhoto(new File("photo/43381220401_63c33bd178_b.jpg "));
@@ -449,7 +423,7 @@ public class Bot extends TelegramLongPollingBot {
         if(msg.equals("История крыма")){
             SendPhoto sendPhoto = new SendPhoto();
             sendPhoto.setChatId(chat_ad);
-            sendPhoto.setPhoto(new File("D:\\фото\\0_187a3c_77be84ae_XXL (1).jpg"));
+            sendPhoto.setPhoto(new File("photo/0_187a3c_77be84ae_XXL (1).jpg"));
             try {
                 execute(sendPhoto);
             } catch (TelegramApiException e) {
@@ -485,7 +459,7 @@ public class Bot extends TelegramLongPollingBot {
         if (msg.equals("Как добраться")) {
             SendPhoto sendPhoto = new SendPhoto();
             sendPhoto.setChatId(chat_ad);
-            sendPhoto.setPhoto(new File("D:\\фото\\img-20181111084138-391.jpg"));
+            sendPhoto.setPhoto(new File("photo/img-20181111084138-391.jpg"));
             try {
                 execute(sendPhoto);
             } catch (TelegramApiException e) {

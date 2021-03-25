@@ -17,75 +17,66 @@ public class Relaxation {
     }
 
     private String connect(String msg) {
-
-        switch (msg) {
-            case "Аквапарки": {
-                try {
-                    document = Jsoup.connect("https://prostorikrima.ru/c/akvaparki-95").get();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                getTitle(document);
+        if (msg.equals("Аквапарки")){
+            try {
+                document = Jsoup.connect("https://prostorikrima.ru/c/akvaparki-95").get();
+            } catch (IOException e) {
+                e.printStackTrace();
             }
-            case "Атракционы": {
-                try {
-                    document = Jsoup.connect("https://prostorikrima.ru/c/attraktsioni-127").get();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                getTitle(document);
+            getTitle(document);
+        }else if (msg.equals("Атракционы")){
+            try {
+                document = Jsoup.connect("https://prostorikrima.ru/c/attraktsioni-127").get();
+            } catch (IOException e) {
+                e.printStackTrace();
             }
-            case "Зоопарки": {
-                try {
-                    document = Jsoup.connect("https://prostorikrima.ru/c/zooparki-94").get();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                getTitle(document);
+            getTitle(document);
+        }else if (msg.equals("Зоопарки")){
+            try {
+                document = Jsoup.connect("https://prostorikrima.ru/c/zooparki-94").get();
+            } catch (IOException e) {
+                e.printStackTrace();
             }
-            case "Дельфинарии": {
-                try {
-                    document = Jsoup.connect("https://prostorikrima.ru/c/delfinarii-96").get();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                getTitle(document);
+            getTitle(document);
+        }else if (msg.equals("Дельфинарии")){
+            try {
+                document = Jsoup.connect("https://prostorikrima.ru/c/delfinarii-96").get();
+            } catch (IOException e) {
+                e.printStackTrace();
             }
-            case "Музеи": {
-                try {
-                    document = Jsoup.connect("https://prostorikrima.ru/c/muzei-91").get();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                getTitle(document);
+            getTitle(document);
+        }else if (msg.equals("Музеи")){
+            try {
+                document = Jsoup.connect("https://prostorikrima.ru/c/muzei-91").get();
+            } catch (IOException e) {
+                e.printStackTrace();
             }
-            case "Экскурсии": {
-                try {
-                    document = Jsoup.connect("https://prostorikrima.ru/c/ekskursii-78").get();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                getTitle(document);
+            getTitle(document);
+        }else if (msg.equals("Экскурсии")){
+            try {
+                document = Jsoup.connect("https://prostorikrima.ru/c/ekskursii-78").get();
+            } catch (IOException e) {
+                e.printStackTrace();
             }
-            case "Активный отдых": {
-                try {
-                    document = Jsoup.connect("https://prostorikrima.ru/c/paraplanerizm-49").get();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                getTitle(document);
+            getTitle(document);
+        }else if (msg.equals("Активный отдых")){
+            try {
+                document = Jsoup.connect("https://prostorikrima.ru/c/paraplanerizm-49").get();
+            } catch (IOException e) {
+                e.printStackTrace();
             }
-
-            default : throw new IllegalStateException("Unexpected value: " + msg);
+            getTitle(document);
         }
+        return getTitle(document);
     }
+
 
     public String getTitle(Document document) {
         Elements elements = document.getElementsByClass("mb-20");
         return elements.text();
     }
 
-    public static SendMessage sendMessageAquapark(long chat_ad){
+    public SendMessage sendMessageAquapark(long chat_ad){
         InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
         InlineKeyboardButton inlineKeyboardButton1 = new InlineKeyboardButton();
         InlineKeyboardButton inlineKeyboardButton2 = new InlineKeyboardButton();
