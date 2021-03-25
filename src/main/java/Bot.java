@@ -548,6 +548,6 @@ public class Bot extends TelegramLongPollingBot {
             replyKeyboardMarkup.setKeyboard(keyboard);
             return "Хороший выбор.";
         }
-        return "Чем ещё я могу помочь?.";
+        return "Чем ещё я могу помочь?";
     }
 }
